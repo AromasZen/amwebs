@@ -988,15 +988,30 @@ ul {
 }
 
 /* ===== SCROLL REVEAL ANIMATIONS ===== */
-.reveal {
+.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-flip {
   opacity: 0;
-  transform: translateY(40px);
   transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.reveal.active {
+.reveal {
+  transform: translateY(40px);
+}
+.reveal-left {
+  transform: translateX(-50px);
+}
+.reveal-right {
+  transform: translateX(50px);
+}
+.reveal-scale {
+  transform: scale(0.9);
+}
+.reveal-flip {
+  transform: perspective(400px) rotateX(-20deg);
+}
+
+.reveal.active, .reveal-left.active, .reveal-right.active, .reveal-scale.active, .reveal-flip.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0) scale(1) rotateX(0);
 }
 
 .reveal-delay-1 {

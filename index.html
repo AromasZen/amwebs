@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agustín Meneses — Diseño & Desarrollo Web Premium</title>
+  <meta name="description"
+    content="Diseño y desarrollo web premium para empresas, startups y profesionales que quieren destacar en el mundo digital." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-accent">A</span>M<span class="logo-dot">.</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#contacto" class="nav-cta">Hablemos</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 1. Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-container">
+      <div class="hero-content reveal">
+        <span class="hero-badge">✦ Disponible para nuevos proyectos</span>
+        <h1 class="hero-title">
+          Diseño webs que no solo <span class="text-gradient">se ven bien</span>, sino que <span
+            class="text-accent">venden</span>.
+        </h1>
+        <p class="hero-subtitle">
+          Ayudo a empresas, startups y profesionales ambiciosos a transformar su presencia digital en una máquina de
+          conversión. Diseño estratégico + código limpio = resultados reales.
+        </p>
+        <div class="hero-buttons">
+          <a href="#portafolio" class="btn btn-primary">
+            <span>Ver mi trabajo</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Proyectos entregados</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">98%</span>
+            <span class="stat-label">Clientes satisfechos</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay-1">
+        <div class="hero-image-wrapper">
+          <img
+            src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/23653197-4099-4af9-80a5-923c741bd66a.png"
+            alt="Mockup 3D de diseño web premium" class="hero-image" />
+          <div class="hero-image-glow"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Trust Logos -->
+  <section class="trust-logos" id="trust">
+    <div class="container">
+      <p class="trust-label reveal">Tecnologías y herramientas que domino</p>
+      <div class="logos-track reveal">
+        <div class="logos-slide">
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.418 0-8-3.582-8-8s3.582-8 8-8 8 3.582 8 8-3.582 8-8 8z" />
+              <path d="M14.828 9.172a4 4 0 10-5.656 5.656 4 4 0 005.656-5.656z" />
+            </svg>
+            <span>React</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path d="M12 2L2 19.5h20L12 2zm0 4l7 13H5l7-13z" />
+            </svg>
+            <span>Next.js</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+            </svg>
+            <span>WordPress</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path
+                d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51z" />
+              <path
+                d="M15.852 17.961h-4.588V8.981h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-3.117-7.51v5.999h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-2.98-3.019-2.98h-3.117z" />
+              <path
+                d="M8.148 8.981H3.56V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM5.032 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019S9.813 1.472 8.148 1.472H5.032V7.51z" />
+              <path
+                d="M8.148 17.961H3.56V8.981h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zM5.032 16.49h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-2.98-3.019-2.98H5.032v5.999z" />
+              <path
+                d="M8.148 24H3.56v-8.039h4.588c2.476 0 4.49 2.014 4.49 4.49S10.624 24 8.148 24zM5.032 22.528h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.354-3.019-3.019-3.019H5.032v6.038z" />
+            </svg>
+            <span>Figma</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path
+                d="M11.146 0h3.924v18.166c-2.013.382-3.491.535-5.108.535-4.803 0-7.31-2.18-7.31-6.32 0-3.994 2.662-6.593 6.799-6.593.764 0 1.344.076 1.695.153V0zm0 8.582c-.458-.153-.84-.2-1.373-.2-2.004 0-3.165 1.222-3.165 3.356 0 2.08 1.107 3.226 3.12 3.226.458 0 .84-.038 1.418-.114V8.582zM21.314 6.06v9.098c0 3.134-.229 4.638-.917 5.937-.611 1.222-1.45 1.985-3.12 2.843L13.5 22.008c1.68-.764 2.507-1.45 3.043-2.556.573-1.145.764-2.478.764-5.86V6.06h4.007z" />
+            </svg>
+            <span>JavaScript</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path
+                d="M7.443 5.35c.639 0 1.23.05 1.77.198a3.83 3.83 0 011.377.544c.394.247.7.544.918.891.22.347.33.743.33 1.188 0 .495-.148.94-.445 1.336a3.2 3.2 0 01-1.279.99c.787.247 1.377.643 1.77 1.188.394.544.59 1.188.59 1.931 0 .495-.099.94-.297 1.336a3.16 3.16 0 01-.838 1.04 3.98 3.98 0 01-1.279.693 5.1 5.1 0 01-1.623.247H2.78V5.35h4.663zm-.394 4.812c.541 0 .984-.148 1.328-.445.345-.297.517-.693.517-1.188 0-.297-.05-.544-.148-.743a1.28 1.28 0 00-.394-.495 1.66 1.66 0 00-.59-.297 2.6 2.6 0 00-.738-.099H4.94v3.267h2.109zm.148 5.108c.295 0 .566-.05.812-.148a1.86 1.86 0 00.64-.396c.172-.173.31-.396.394-.643.099-.247.148-.544.148-.891 0-.693-.197-1.188-.59-1.534-.394-.347-.935-.495-1.623-.495H4.94v4.107h2.257zM13.24 11.705c0-.693.099-1.336.297-1.931a4.67 4.67 0 01.886-1.583 4.12 4.12 0 011.377-1.04 4.29 4.29 0 011.82-.396c.689 0 1.312.148 1.82.396a4.12 4.12 0 011.377 1.04c.394.445.689.94.886 1.583.197.594.297 1.237.297 1.931s-.099 1.336-.297 1.931a4.67 4.67 0 01-.886 1.583 4.12 4.12 0 01-1.377 1.04 4.29 4.29 0 01-1.82.396c-.689 0-1.312-.148-1.82-.396a4.12 4.12 0 01-1.377-1.04 4.67 4.67 0 01-.886-1.583 6.4 6.4 0 01-.297-1.931zm2.209 0c0 .396.05.792.148 1.138.099.347.247.643.445.891.197.247.445.445.738.594.295.148.64.198 1.04.198.394 0 .738-.05 1.033-.198a2.1 2.1 0 00.738-.594c.197-.247.345-.544.445-.891.099-.347.148-.743.148-1.138 0-.396-.05-.792-.148-1.138a2.58 2.58 0 00-.445-.891 2.1 2.1 0 00-.738-.594 2.36 2.36 0 00-1.033-.198c-.394 0-.738.05-1.04.198a2.1 2.1 0 00-.738.594 2.58 2.58 0 00-.445.891c-.099.347-.148.743-.148 1.138z" />
+            </svg>
+            <span>Shopify</span>
+          </div>
+          <div class="logo-item">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="#94A3B8">
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295l.213-3.053 5.56-5.023c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.566-4.458c.538-.196 1.006.128.828.94z" />
+            </svg>
+            <span>SEO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Services Section -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Servicios</span>
+        <h2 class="section-title">Cómo puedo <span class="text-gradient">ayudarte</span></h2>
+        <p class="section-subtitle">Soluciones digitales integrales diseñadas para impulsar tu negocio al siguiente
+          nivel.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card glass-card reveal">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18" />
+              <path d="M9 21V9" />
+            </svg>
+          </div>
+          <h3 class="service-title">Diseño UI/UX</h3>
+          <p class="service-desc">Creo interfaces intuitivas y visualmente impactantes que enamoran a tus usuarios desde
+            el primer clic. Cada pixel tiene un propósito: convertir visitantes en clientes.</p>
+          <span class="service-link">Saber más →</span>
+        </div>
+        <!-- Service 2 -->
+        <div class="service-card glass-card reveal reveal-delay-1">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+              <line x1="14" y1="4" x2="10" y2="20" />
+            </svg>
+          </div>
+          <h3 class="service-title">Desarrollo Web Custom</h3>
+          <p class="service-desc">Desarrollo sitios web a medida con código limpio, rendimiento optimizado y
+            arquitectura escalable. Tu web no será una plantilla más: será única como tu marca.</p>
+          <span class="service-link">Saber más →</span>
+        </div>
+        <!-- Service 3 -->
+        <div class="service-card glass-card reveal reveal-delay-2">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+            </svg>
+          </div>
+          <h3 class="service-title">E-Commerce</h3>
+          <p class="service-desc">Tiendas online que venden mientras duermes. Integro pasarelas de pago, gestión de
+            inventario y experiencias de compra fluidas que maximizan tu facturación.</p>
+          <span class="service-link">Saber más →</span>
+        </div>
+        <!-- Service 4 -->
+        <div class="service-card glass-card reveal reveal-delay-3">
+          <div class="service-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              <line x1="11" y1="8" x2="11" y2="14" />
+              <line x1="8" y1="11" x2="14" y2="11" />
+            </svg>
+          </div>
+          <h3 class="service-title">Optimización & SEO</h3>
+          <p class="service-desc">Hago que Google te encuentre y tus usuarios se queden. Optimizo velocidad, estructura
+            y contenido para que tu web escale posiciones y atraiga tráfico cualificado.</p>
+          <span class="service-link">Saber más →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Portfolio Section -->
+  <section class="portfolio" id="portafolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Portafolio</span>
+        <h2 class="section-title">Proyectos <span class="text-gradient">Destacados</span></h2>
+        <p class="section-subtitle">Cada proyecto es una historia de transformación digital. Aquí están algunos de mis
+          favoritos.</p>
+      </div>
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-card reveal">
+          <div class="portfolio-image">
+            <img
+              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/bb8cbec6-97b4-4c07-bb49-3fd25385615d.png"
+              alt="Proyecto E-commerce Luxe Fashion" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-view">Ver caso de estudio →</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">E-Commerce</span>
+            <h3 class="portfolio-title">Luxe Fashion Store</h3>
+            <p class="portfolio-desc">Rediseño completo de tienda online de moda premium. Incremento del 180% en
+              conversiones y reducción del 40% en tasa de abandono del carrito.</p>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="portfolio-card reveal reveal-delay-1">
+          <div class="portfolio-image">
+            <img
+              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/8827cc4d-53a3-416c-a77d-88031bf7cf39.png"
+              alt="Proyecto SaaS Dashboard" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-view">Ver caso de estudio →</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">SaaS / Dashboard</span>
+            <h3 class="portfolio-title">DataFlow Analytics</h3>
+            <p class="portfolio-desc">Plataforma de analítica en tiempo real para startup fintech. Diseño de dashboard
+              intuitivo que redujo el tiempo de onboarding en un 60%.</p>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="portfolio-card reveal reveal-delay-2">
+          <div class="portfolio-image">
+            <img
+              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/df4f74e3-439b-4cf4-aabc-9a92e1585c58.png"
+              alt="Proyecto Restaurante Gourmet" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-view">Ver caso de estudio →</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Gastronomía</span>
+            <h3 class="portfolio-title">Sakura Gastrobar</h3>
+            <p class="portfolio-desc">Web experiencial para restaurante de alta cocina fusión. Sistema de reservas
+              integrado que aumentó las reservas online un 250%.</p>
+          </div>
+        </div>
+        <!-- Project 4 -->
+        <div class="portfolio-card reveal reveal-delay-3">
+          <div class="portfolio-image">
+            <img
+              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/6ff75c4c-b0ff-45af-a30f-0518bd2f0496.png"
+              alt="Proyecto Startup Tech" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-view">Ver caso de estudio →</span>
+            </div>
+          </div>
+          <div class="portfolio-info">
+            <span class="portfolio-tag">Startup / Landing</span>
+            <h3 class="portfolio-title">NexGen AI</h3>
+            <p class="portfolio-desc">Landing page de alto impacto para startup de inteligencia artificial. Tasa de
+              conversión del 12% y más de 3,000 leads en el primer mes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Process Section -->
+  <section class="process" id="proceso">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Proceso</span>
+        <h2 class="section-title">Cómo <span class="text-gradient">trabajaremos</span> juntos</h2>
+        <p class="section-subtitle">Un proceso claro y transparente para que siempre sepas en qué punto estamos. Sin
+          sorpresas, solo resultados.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step glass-card reveal">
+          <div class="step-number">01</div>
+          <h3 class="step-title">Descubrimiento</h3>
+          <p class="step-desc">Nos sentamos (virtual o presencialmente) a entender tu negocio, tus objetivos y tu
+            audiencia. Analizo tu competencia y defino la estrategia perfecta para ti.</p>
+        </div>
+        <div class="process-connector reveal">
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <path d="M0 12h36m0 0l-6-6m6 6l-6 6" stroke="#00E5FF" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="process-step glass-card reveal reveal-delay-1">
+          <div class="step-number">02</div>
+          <h3 class="step-title">Diseño</h3>
+          <p class="step-desc">Creo wireframes y prototipos interactivos en Figma. Tú apruebas cada pantalla antes de
+            escribir una sola línea de código. Control total, cero sorpresas.</p>
+        </div>
+        <div class="process-connector reveal">
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <path d="M0 12h36m0 0l-6-6m6 6l-6 6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="process-step glass-card reveal reveal-delay-2">
+          <div class="step-number">03</div>
+          <h3 class="step-title">Desarrollo</h3>
+          <p class="step-desc">Transformo el diseño en código limpio y optimizado. Desarrollo responsive, rápido y
+            preparado para escalar. Revisiones semanales para que veas el progreso.</p>
+        </div>
+        <div class="process-connector reveal">
+          <svg width="40" height="24" viewBox="0 0 40 24" fill="none">
+            <path d="M0 12h36m0 0l-6-6m6 6l-6 6" stroke="#00E5FF" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="process-step glass-card reveal reveal-delay-3">
+          <div class="step-number">04</div>
+          <h3 class="step-title">Lanzamiento</h3>
+          <p class="step-desc">Testing exhaustivo, optimización SEO y despliegue. Te entrego todo documentado y te
+            acompaño en las primeras semanas post-lanzamiento. Tu éxito es mi éxito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. About Me Section -->
+  <section class="about" id="sobre-mi">
+    <div class="container about-container">
+      <div class="about-content reveal">
+        <span class="section-tag">Sobre Mí</span>
+        <h2 class="section-title">El humano detrás <span class="text-gradient">del código</span></h2>
+        <p class="about-text">
+          Soy Agustín Meneses, diseñador y desarrollador web con más de 5 años creando experiencias digitales que
+          generan
+          impacto real. Mi filosofía es simple: <strong>cada proyecto debe resolver un problema de negocio, no solo
+            verse bonito.</strong>
+        </p>
+        <p class="about-text">
+          He trabajado con startups en fase seed, empresas consolidadas y profesionales independientes en más de 8
+          industrias diferentes. Lo que me diferencia de una agencia tradicional es que conmigo obtienes atención
+          personalizada, comunicación directa y la flexibilidad de alguien que realmente se involucra en tu proyecto.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <span class="highlight-icon">🎯</span>
+            <span>Enfocado en resultados</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon">⚡</span>
+            <span>Entrega puntual siempre</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon">💬</span>
+            <span>Comunicación transparente</span>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon">🚀</span>
+            <span>Código limpio y escalable</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal reveal-delay-1">
+        <div class="about-card glass-card">
+          <div class="about-avatar">CM</div>
+          <h3>Agustín Meneses</h3>
+          <p>Diseñador & Desarrollador Web</p>
+          <div class="about-socials">
+            <a href="#" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Dribbble">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.81zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702C16.86 2.61 14.545 1.62 12 1.62c-.825 0-1.63.1-2.4.285v.15zm10.335 3.483c-.218.29-1.91 2.493-5.724 4.04.24.49.47.985.68 1.486.08.18.15.36.22.53 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.31-6.38z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Testimonials Section -->
+  <section class="testimonials" id="testimonios">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Testimonios</span>
+        <h2 class="section-title">Lo que dicen <span class="text-gradient">mis clientes</span></h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card glass-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Agustín transformó completamente nuestra presencia online. Pasamos de una web
+            genérica a una experiencia que realmente refleja nuestra marca premium. Las ventas online crecieron un 200%
+            en los primeros 3 meses."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <strong class="testimonial-name">María Rodríguez</strong>
+              <span class="testimonial-role">CEO, Luxe Fashion Store</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card glass-card reveal reveal-delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Trabajar con Agustín fue una experiencia excepcional. Entendió nuestra visión
+            desde el día uno y la ejecutó con una precisión impresionante. El dashboard que diseñó redujo nuestro tiempo
+            de onboarding a la mitad."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JL</div>
+            <div>
+              <strong class="testimonial-name">Javier López</strong>
+              <span class="testimonial-role">CTO, DataFlow Analytics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. CTA + Contact Form + Footer -->
+  <section class="cta-section" id="contacto">
+    <div class="container">
+      <div class="cta-content reveal">
+        <h2 class="cta-title">¿Listo para crear algo <span class="text-gradient">increíble</span>?</h2>
+        <p class="cta-subtitle">Cuéntame sobre tu proyecto y te responderé en menos de 24 horas. Sin compromiso, sin
+          letra pequeña.</p>
+      </div>
+      <form class="contact-form glass-card reveal" id="contactForm">
+        <div class="form-group">
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="projectType">Tipo de proyecto</label>
+          <select id="projectType" name="projectType" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="web-corporativa">Web Corporativa</option>
+            <option value="ecommerce">E-Commerce / Tienda Online</option>
+            <option value="landing-page">Landing Page</option>
+            <option value="aplicacion-web">Aplicación Web</option>
+            <option value="rediseno">Rediseño Web</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="budget">Presupuesto estimado</label>
+          <select id="budget" name="budget" required>
+            <option value="" disabled selected>Selecciona un rango</option>
+            <option value="1000-3000">$1,000 - $3,000 USD</option>
+            <option value="3000-5000">$3,000 - $5,000 USD</option>
+            <option value="5000-10000">$5,000 - $10,000 USD</option>
+            <option value="10000+">$10,000+ USD</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <span>Enviar mensaje</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 2L11 13" />
+            <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+          </svg>
+        </button>
+        <p class="form-note">🔒 Tu información está segura. Nunca compartiré tus datos con terceros.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-accent">C</span>M<span class="logo-dot">.</span>
+        </a>
+        <p class="footer-desc">Diseño y desarrollo web premium para marcas que quieren destacar en el mundo digital.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="/cdn-cgi/l/email-protection#d3bbbcbfb293b0b2a1bfbca0beb6bdb7bca9b2fdb7b6a5"><span
+                class="__cf_email__"
+                data-cfemail="9af2f5f6fbdaf9fbe8f6f5e9f7fff4fef5e0fbb4feffec">[email&#160;protected]</span></a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Dribbble</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Política de Privacidad</a></li>
+          <li><a href="#">Términos de Servicio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Agustín Meneses. Todos los derechos reservados. Hecho con 💜 y mucho ☕</p>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

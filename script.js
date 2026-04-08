@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Scroll Reveal Animations (Intersection Observer)
-  const revealElements = document.querySelectorAll('.reveal');
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-flip');
   if (revealElements.length > 0) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -52,33 +52,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Contact Form Submission (Simulation)
+  // 4. Contact Form Submission (WhatsApp Redirect)
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const projectType = document.getElementById('projectType').options[document.getElementById('projectType').selectedIndex].text;
+      const budget = document.getElementById('budget').value;
+
+      const message = `¡Hola Agustín! Me gustaría contactarte por un proyecto.%0A%0A*Nombre:* ${name}%0A*Email:* ${email}%0A*Tipo de proyecto:* ${projectType}%0A*Presupuesto:* ${budget}`;
+
+      const whatsappNumber = "5492914425849"; // Formatted for wa.me API
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
       const btn = contactForm.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
       
-      // Feedback to the user
-      btn.innerHTML = '<span>Enviando...</span>';
+      btn.innerHTML = '<span>Redirigiendo a WhatsApp...</span>';
       btn.disabled = true;
       
-      // Simulate network request
       setTimeout(() => {
-        btn.innerHTML = '<span>¡Mensaje Enviado! ✓</span>';
-        btn.style.background = '#10B981'; // Green color
-        btn.style.color = '#fff';
+        window.open(whatsappUrl, '_blank');
         contactForm.reset();
         
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.style.background = '';
-          btn.style.color = '';
-          btn.disabled = false;
-        }, 3000);
-      }, 1500);
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }, 500);
     });
   }
 });

@@ -39,6 +39,10 @@
 
   <!-- 1. Hero Section -->
   <section class="hero" id="hero">
+    <div class="hero-video-wrapper">
+      <video id="heroVideo" autoplay loop muted playsinline crossorigin="anonymous"></video>
+      <div class="hero-video-overlay"></div>
+    </div>
     <div class="hero-bg-glow"></div>
     <div class="container hero-container">
       <div class="hero-content reveal">
@@ -214,7 +218,7 @@
               <line x1="8" y1="11" x2="14" y2="11" />
             </svg>
           </div>
-          <h3 class="service-title">Optimización & SEO</h3>
+          <h3 class="service-title">Optimización SEO</h3>
           <p class="service-desc">Hago que Google te encuentre y tus usuarios se queden. Optimizo velocidad, estructura
             y contenido para que tu web escale posiciones y atraiga tráfico cualificado.</p>
           <span class="service-link">Saber más →</span>
@@ -236,11 +240,9 @@
         <!-- Project 1 -->
         <div class="portfolio-card reveal-scale">
           <div class="portfolio-image">
-            <img
-              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/bb8cbec6-97b4-4c07-bb49-3fd25385615d.png"
-              alt="Proyecto E-commerce Luxe Fashion" loading="lazy" />
+            <img src="img/luxury.jpg" alt="Proyecto E-commerce Luxe Fashion" loading="lazy" />
             <div class="portfolio-overlay">
-              <span class="portfolio-view">Ver caso de estudio →</span>
+
             </div>
           </div>
           <div class="portfolio-info">
@@ -253,11 +255,9 @@
         <!-- Project 2 -->
         <div class="portfolio-card reveal-scale reveal-delay-1">
           <div class="portfolio-image">
-            <img
-              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/8827cc4d-53a3-416c-a77d-88031bf7cf39.png"
-              alt="Proyecto SaaS Dashboard" loading="lazy" />
+            <img src="img/SaaS.jpg" alt="Proyecto SaaS Dashboard" loading="lazy" />
             <div class="portfolio-overlay">
-              <span class="portfolio-view">Ver caso de estudio →</span>
+
             </div>
           </div>
           <div class="portfolio-info">
@@ -270,11 +270,9 @@
         <!-- Project 3 -->
         <div class="portfolio-card reveal-scale reveal-delay-2">
           <div class="portfolio-image">
-            <img
-              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/df4f74e3-439b-4cf4-aabc-9a92e1585c58.png"
-              alt="Proyecto Restaurante Gourmet" loading="lazy" />
+            <img src="img/restaurante.jpg" alt="Proyecto Restaurante Gourmet" loading="lazy" />
             <div class="portfolio-overlay">
-              <span class="portfolio-view">Ver caso de estudio →</span>
+
             </div>
           </div>
           <div class="portfolio-info">
@@ -287,11 +285,9 @@
         <!-- Project 4 -->
         <div class="portfolio-card reveal-scale reveal-delay-3">
           <div class="portfolio-image">
-            <img
-              src="https://mgx-backend-cdn.metadl.com/generate/images/1029706/2026-04-08/6ff75c4c-b0ff-45af-a30f-0518bd2f0496.png"
-              alt="Proyecto Startup Tech" loading="lazy" />
+            <img src="img/4.jpg" alt="Proyecto Startup Tech" loading="lazy" />
             <div class="portfolio-overlay">
-              <span class="portfolio-view">Ver caso de estudio →</span>
+
             </div>
           </div>
           <div class="portfolio-info">
@@ -330,7 +326,7 @@
         <div class="process-step glass-card reveal-right reveal-delay-1">
           <div class="step-number">02</div>
           <h3 class="step-title">Diseño</h3>
-          <p class="step-desc">Creo wireframes y prototipos interactivos en Figma. Tú apruebas cada pantalla antes de
+          <p class="step-desc">Creo demos y prototipos interactivos. Tú apruebas cada pantalla antes de
             escribir una sola línea de código. Control total, cero sorpresas.</p>
         </div>
         <div class="process-connector reveal">
@@ -533,19 +529,15 @@
       <div class="footer-links">
         <h4>Contacto</h4>
         <ul>
-          <li><a href="/cdn-cgi/l/email-protection#d3bbbcbfb293b0b2a1bfbca0beb6bdb7bca9b2fdb7b6a5"><span
-                class="__cf_email__"
-                data-cfemail="9af2f5f6fbdaf9fbe8f6f5e9f7fff4fef5e0fbb4feffec">[email&#160;protected]</span></a></li>
-          <li><a href="#">LinkedIn</a></li>
-          <li><a href="#">Dribbble</a></li>
-          <li><a href="#">GitHub</a></li>
+          <span>menesesa2008@gmail.com </span>
+          <li>+54 291 442 5849</li>
         </ul>
       </div>
       <div class="footer-links">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Política de Privacidad</a></li>
-          <li><a href="#">Términos de Servicio</a></li>
+          <li>Política de Privacidad</li>
+          <li>Términos de Servicio</li>
         </ul>
       </div>
     </div>
@@ -556,6 +548,26 @@
     </div>
   </footer>
 
+  <!-- Modal de Servicios -->
+  <div class="service-modal" id="serviceModal">
+    <div class="service-modal-overlay" id="serviceModalOverlay"></div>
+    <div class="service-modal-content glass-card">
+      <button class="service-modal-close" id="serviceModalClose" aria-label="Cerrar modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="service-modal-icon" id="modalIcon"></div>
+      <h3 class="service-modal-title" id="modalTitle"></h3>
+      <p class="service-modal-desc" id="modalDesc"></p>
+      <div class="service-modal-extra" id="modalExtra"></div>
+      <a href="#contacto" class="btn btn-primary modal-cta" id="modalCta">Contactar ahora</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="script.js"></script>
 </body>

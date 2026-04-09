@@ -178,4 +178,12 @@ document.addEventListener('DOMContentLoaded', () => {
       hls.attachMedia(videoElement);
     }
   }
+
+  // 7. Infinite Logo Scroll
+  const logosSlide = document.querySelector('.logos-slide');
+  if (logosSlide) {
+    const items = logosSlide.innerHTML;
+    // Duplicamos el contenido para el efecto de carrusel infinito (-50% translateX)
+    logosSlide.innerHTML += items; 
+  }
 });

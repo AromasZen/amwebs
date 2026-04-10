@@ -186,4 +186,109 @@ document.addEventListener('DOMContentLoaded', () => {
     // Duplicamos el contenido para el efecto de carrusel infinito (-50% translateX)
     logosSlide.innerHTML += items; 
   }
+
+  // 8. Cursor Interactivo "Bicho"
+  const bichoContainer = document.createElement('div');
+  bichoContainer.id = 'bicho-cursor-container';
+  document.body.appendChild(bichoContainer);
+
+  const N = 20;
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  const pointer = { x: width / 2, y: height / 2 };
+  
+  // Custom cursor elements
+  const elems = [];
+  for (let i = 0; i < N; i++) {
+    elems[i] = { use: null, x: width / 2, y: height / 2 };
+  }
+
+  // Helper to create and style segments
+  function prepend(type, index) {
+      const el = document.createElement('div');
+      el.className = `bicho-segment ${type.toLowerCase()}`;
+      bichoContainer.appendChild(el);
+      elems[index].use = el;
+      
+      // Default styles
+      el.style.position = "fixed";
+      el.style.top = "0";
+      el.style.left = "0";
+      el.style.pointerEvents = "none";
+      el.style.zIndex = "9999";
+      
+      if (type === "Cabeza") {
+          el.style.width = "18px";
+          el.style.height = "18px";
+          el.style.backgroundColor = "#00E5FF";
+          el.style.borderRadius = "50%";
+          el.style.boxShadow = "0 0 15px #00E5FF, 0 0 30px #00E5FF";
+      } else if (type === "Aletas") {
+          el.style.width = "30px";
+          el.style.height = "4px";
+          el.style.backgroundColor = "#7C3AED";
+          el.style.borderRadius = "2px";
+          el.style.boxShadow = "0 0 10px #7C3AED";
+      } else {
+          const size = Math.max(3, 14 - index * 0.6);
+          el.style.width = `${size}px`;
+          el.style.height = `${size}px`;
+          el.style.backgroundColor = `rgba(0, 229, 255, ${Math.max(0.2, 1 - index / N)})`;
+          el.style.borderRadius = "50%";
+      }
+  }
+
+  // Initialize nodes based on the snippet pattern
+  for (let i = 1; i < N; i++) {
+      if (i === 1) prepend("Cabeza", i);
+      else if (i === 8 || i === 14) prepend("Aletas", i);
+      else prepend("Espina", i);
+  }
+
+  // Listeners
+  window.addEventListener('resize', () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+  });
+
+  window.addEventListener('mousemove', (e) => {
+      pointer.x = e.clientX;
+      pointer.y = e.clientY;
+  });
+
+  window.addEventListener('touchmove', (e) => {
+      pointer.x = e.touches[0].clientX;
+      pointer.y = e.touches[0].clientY;
+  });
+
+  // Animation Loop
+  function anim() {
+      requestAnimationFrame(anim);
+      
+      // Smooth follow for the virtual leader node
+      let leader = elems[0];
+      leader.x += (pointer.x - leader.x) * 0.15;
+      leader.y += (pointer.y - leader.y) * 0.15;
+
+      // Iterative Inverse Kinematics for the rest
+      for (let i = 1; i < N; i++) {
+          let current = elems[i];
+          let prev = elems[i - 1];
+          
+          let dx = prev.x - current.x;
+          let dy = prev.y - current.y;
+          let angle = Math.atan2(dy, dx);
+          
+          let targetDist = i === 1 ? 0 : 7; // distance between segments
+
+          current.x = prev.x - Math.cos(angle) * targetDist;
+          current.y = prev.y - Math.sin(angle) * targetDist;
+
+          if (current.use) {
+              current.use.style.transform = `translate(calc(${current.x}px - 50%), calc(${current.y}px - 50%)) rotate(${angle}rad)`;
+          }
+      }
+  }
+  
+  anim(); // Start the loop
 });

@@ -291,4 +291,58 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   anim(); // Start the loop
+
+  // 9. Scroll Progress Bar
+  const progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      progressBar.style.width = scrolled + "%";
+    });
+  }
+
+  // 10. Parallax Effect
+  const parallaxElements = document.querySelectorAll('.parallax');
+  if (parallaxElements.length > 0) {
+    window.addEventListener('scroll', () => {
+      let scrollY = window.scrollY;
+      parallaxElements.forEach(el => {
+        let speed = el.getAttribute('data-speed') || 0.1;
+        el.style.transform = `translateY(${scrollY * speed}px)`;
+      });
+    });
+  }
+
+  // 11. Spotlight Hover on Glass Cards
+  const glassCards = document.querySelectorAll('.glass-card');
+  glassCards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
+  });
+
+  // 12. Magnetic Buttons
+  const magneticButtons = document.querySelectorAll('.btn');
+  magneticButtons.forEach(btn => {
+    btn.classList.add('btn-magnetic');
+    
+    btn.addEventListener('mousemove', (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      
+      // Fuerza del magnetismo
+      btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0px, 0px)';
+    });
+  });
 });

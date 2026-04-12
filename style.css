@@ -8,9 +8,9 @@
 }
 
 :root {
-  --bg-primary: rgba(5, 5, 10, 0.5);
-  --bg-secondary: rgba(10, 13, 20, 0.6);
-  --bg-tertiary: rgba(13, 17, 26, 0.6);
+  --bg-primary: #05050A;
+  --bg-secondary: #0A0D14;
+  --bg-tertiary: #0D111A;
   --accent-cyan: #00F0FF;
   --accent-purple: #9D4EDD;
   --accent-pink: #FF007F;
@@ -42,18 +42,6 @@ body {
   width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* ===== 3D CAR CANVAS ===== */
-#carCanvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -10;
-  object-fit: cover;
-  pointer-events: none;
 }
 
 h1,
